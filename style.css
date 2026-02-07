@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    height:100vh;
+    background:#feecea;
+    overflow:hidden;
+}
+
+#wrapper{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.content{
+    width:100%;
+    display:flex;
+}
+
+.left, .right{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.title{
+    font-family:'Dancing Script', cursive;
+    font-size:3rem;
+    text-align:center;
+}
+
+.happy{
+    color:#fff;
+    text-shadow:3px 3px #333;
+}
+
+.birthday{
+    color:#ff7882;
+    text-shadow:3px 3px #333;
+}
+
+.date__of__birth{
+    margin-top:20px;
+    padding:10px 30px;
+    background:#ff7882;
+    border-radius:50px;
+    font-weight:bold;
+}
+
+#btn__letter{
+    margin-top:30px;
+    padding:10px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ff7882;
+    color:#fff;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+#btn__letter:hover{
+    background:#ff5f6d;
+}
+
+.box__account{
+    position:relative;
+}
+
+.image{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    overflow:hidden;
+    border:5px solid #333;
+}
+
+.image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.name{
+    margin-top:10px;
+    padding:5px 15px;
+    background:#ff7882;
+    border-radius:20px;
+    font-family:'Dancing Script', cursive;
+    font-size:1.5rem;
+}
+
+.balloon_one,
+.balloon_two{
+    position:absolute;
+    width:60px;
+    height:80px;
+    background:red;
+    border-radius:50%;
+    animation:float 3s infinite alternate;
+}
+
+.balloon_one{
+    left:-70px;
+    top:-40px;
+    background:#ff6b6b;
+}
+
+.balloon_two{
+    right:-70px;
+    top:40px;
+    background:#48dbfb;
+}
+
+@keyframes float{
+    from{transform:translateY(0);}
+    to{transform:translateY(-20px);}
+}
+
+/* Mail Box */
+.boxMail{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    visibility:hidden;
+    transition:.4s;
+}
+
+.boxMail.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.boxMail-container{
+    width:600px;
+    height:350px;
+    background:#ff7882;
+    display:flex;
+    color:#fff;
+}
+
+.card1, .card2{
+    width:50%;
+    padding:20px;
+}
+
+.fa-xmark{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:30px;
+    cursor:pointer;
+}

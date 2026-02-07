@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadhna Birthday</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+
+    <div class="content">
+        <div class="left">
+            <div class="title">
+                <h1 class="happy">Happy</h1>
+                <h1 class="birthday">Birthday</h1>
+            </div>
+
+            <div class="date__of__birth">
+                <span></span>
+            </div>
+
+            <button id="btn__letter">
+                Click Here Sadhna <i class="fa-regular fa-envelope"></i>
+            </button>
+        </div>
+
+        <div class="right">
+            <div class="box__account">
+                <div class="image">
+                    <img src="./images/unnamed.png" alt="">
+                </div>
+
+                <div class="name">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Dear Sadhna</span>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="balloon_one"></div>
+                <div class="balloon_two"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mail Box -->
+    <div class="boxMail">
+        <i class="fa-solid fa-xmark"></i>
+
+        <div class="boxMail-container">
+            <div class="card1">
+                <h3>Happy Birthday</h3>
+                <h4>To: Sadhna 💖</h4>
+            </div>
+
+            <div class="card2">
+                <h3>To my lovely sister 💕</h3>
+                <h2>
+                    My dear sister Sadhna 💖  
+                    You are not just my sister, you are my strength and my biggest blessing.
+                    No matter what life brings, remember your brother is always with you.
+                    May this year bring happiness, success, and peace into your life.
+                    Happy Birthday 🎂🎈
+                </h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+let datetxt = "8 Feb 2026";
+let charArrDate = datetxt.split('');
+let index = 0;
+let dateSpan = document.querySelector(".date__of__birth span");
+
+setInterval(() => {
+    if(index < charArrDate.length){
+        dateSpan.textContent += charArrDate[index];
+        index++;
+    }
+}, 150);
+
+let mailBtn = document.querySelector("#btn__letter");
+let boxMail = document.querySelector(".boxMail");
+let closeBtn = document.querySelector(".fa-xmark");
+
+mailBtn.onclick = () => boxMail.classList.add("active");
+closeBtn.onclick = () => boxMail.classList.remove("active");
+</script>
+
+</body>
+</html>
